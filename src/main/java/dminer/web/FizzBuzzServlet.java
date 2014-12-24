@@ -23,7 +23,7 @@ public class FizzBuzzServlet extends HttpServlet {
 
             FizzBuzz fizzBuzz = new FizzBuzz();
 
-            out.println("<html><head><title>FizzBuzz</title></head><body>");
+            out.println("<html><head><title>Hello World</title></head><body>");
             out.println(fizzBuzz.say(number) +"</body>");
             out.println("</html>");
         } finally {

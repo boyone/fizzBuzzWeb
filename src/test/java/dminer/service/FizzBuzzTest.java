@@ -19,7 +19,7 @@ public class FizzBuzzTest {
 	@Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][] {     
-        		{ 1, "1" }, { 2, "2" }, { 3, "Fizz" }  
+        		{ 1, "1" }, { 2, "2" }, { 3, "Fizz" }, {4, "4"}, {5, "Buzz"}
            });
     }
 
