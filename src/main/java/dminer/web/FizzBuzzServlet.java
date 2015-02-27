@@ -15,13 +15,13 @@ public class FizzBuzzServlet extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
         String numberStr = request.getParameter("number");
         Integer number = Integer.parseInt(numberStr);
 
         FizzBuzz fizzBuzz = new FizzBuzz();
 
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
         out.println("<html><head><title>Hello FizzBuzz</title></head><body>");
         out.println(fizzBuzz.say(number) + "</body>");
         out.println("</html>");
