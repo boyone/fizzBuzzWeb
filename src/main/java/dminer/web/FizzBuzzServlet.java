@@ -17,18 +17,15 @@ public class FizzBuzzServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        try {
-            String numberStr = request.getParameter("number");
-            Integer number = Integer.parseInt(numberStr);
+        String numberStr = request.getParameter("number");
+        Integer number = Integer.parseInt(numberStr);
 
-            FizzBuzz fizzBuzz = new FizzBuzz();
+        FizzBuzz fizzBuzz = new FizzBuzz();
 
-            out.println("<html><head><title>Hello World</title></head><body>");
-            out.println(fizzBuzz.say(number) +"</body>");
-            out.println("</html>");
-        } finally {
-            out.close();
-        }
+        out.println("<html><head><title>Hello FizzBuzz</title></head><body>");
+        out.println(fizzBuzz.say(number) + "</body>");
+        out.println("</html>");
+        out.close();
     }
 
     @Override
@@ -43,8 +40,4 @@ public class FizzBuzzServlet extends HttpServlet {
         processRequest(request, response);
     }
 
-    @Override
-    public String getServletInfo() {
-        return "Short description";
-    }
 }

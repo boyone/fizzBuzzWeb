@@ -12,25 +12,26 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(Parameterized.class)
 public class FizzBuzzTest {
-	private int number;
+    private int number;
     private String expected;
-	FizzBuzz fizzBuzz = new FizzBuzz();
-	
-	@Parameters
+    FizzBuzz fizzBuzz = new FizzBuzz();
+
+    @Parameters
     public static Collection<Object[]> data() {
-        return Arrays.asList(new Object[][] {     
-        		{ 1, "1" }, { 2, "2" }, { 3, "Fizz" }, {4, "4"}, {5, "Buzz"}
-           });
+        return Arrays.asList(new Object[][]{
+            {1, "1"}, {2, "2"}, {3, "Fizz"}, {4, "4"},
+            {5, "Buzz"}
+        });
     }
 
     public FizzBuzzTest(int number, String expected) {
-    	this.number = number;
+        this.number = number;
         this.expected = expected;
     }
-    
+
     @Test
     public void shouldSayWithFizzBuzzRule() {
-		assertEquals(this.expected, fizzBuzz.say(this.number));
-	}
-    	
+        assertEquals(this.expected, fizzBuzz.say(this.number));
+    }
+
 }
