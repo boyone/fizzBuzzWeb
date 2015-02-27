@@ -22,7 +22,7 @@ public class FizzBuzzServlet extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        out.println("<html><head><title>Hello FizzBuzz</title></head><body>");
+        out.println("<html><head><title>Hello</title></head><body>");
         out.println(fizzBuzz.say(number) + "</body>");
         out.println("</html>");
         out.close();
