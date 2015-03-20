@@ -20,7 +20,7 @@ public class FizzBuzzTest {
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
             {1, "1"}, {2, "2"}, {3, "Fizz"}, {4, "4"},
-            {5, "Buzz"}, {6, "Fizz"}
+            {5, "Buzz"}, {6, "Fizz"}, {15, "FizzBuzz"}
         });
     }
 
