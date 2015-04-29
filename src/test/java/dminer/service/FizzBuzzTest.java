@@ -14,24 +14,30 @@ import static org.junit.Assert.assertEquals;
 public class FizzBuzzTest {
     private int number;
     private String expected;
+    private String message;
     FizzBuzz fizzBuzz = new FizzBuzz();
 
     @Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-            {1, "1"}, {2, "2"}, {3, "Fizz"}, {4, "4"},
-            {5, "Buzz"}, {6, "Fizz"}
+            {1, "1", "countOneShouldSayOne"},
+            {2, "2", "countTwoShouldSayTwo"},
+            {3, "Fizz", "countThreeShouldSayFizz"},
+            {4, "4", "countFourShouldSayFour"},
+            {5, "Buzz", "countFiveShouldSayBuzz"},
+            {6, "Fizz", "countSixShouldSayFizz"}
         });
     }
 
-    public FizzBuzzTest(int number, String expected) {
+    public FizzBuzzTest(int number, String expected, String message) {
         this.number = number;
         this.expected = expected;
+        this.message = message;
     }
 
     @Test
     public void shouldSayWithFizzBuzzRule() {
-        assertEquals(this.expected, fizzBuzz.say(this.number));
+        assertEquals(this.message, this.expected, fizzBuzz.say(this.number));
     }
 
 }
