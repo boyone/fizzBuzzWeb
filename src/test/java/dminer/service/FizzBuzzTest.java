@@ -25,8 +25,7 @@ public class FizzBuzzTest {
             {3, "Fizz", "countThreeShouldSayFizz"},
             {4, "4", "countFourShouldSayFour"},
             {5, "Buzz", "countFiveShouldSayBuzz"},
-            {6, "Fizz", "countSixShouldSayFizz"},
-            {15, "FizzBuzz", "countFifteenShouldSayFizzBuzz"}
+            {6, "Fizz", "countSixShouldSayFizz"}
         });
     }
 
