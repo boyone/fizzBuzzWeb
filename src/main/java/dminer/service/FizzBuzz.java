@@ -3,6 +3,8 @@ package dminer.service;
 public class FizzBuzz {
 
 	public String say(int number) {
+		if(number % 8 == 0)
+			return "BuzzFizz";
 		if(number % 15 == 0)
 			return "FizzBuzz";
 		if(number % 3 == 0)
